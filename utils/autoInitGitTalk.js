@@ -70,9 +70,12 @@ console.log("开始初始化评论...");
                     let html = await send({...requestGetOpt, url: item});
                     let title = cheerio.load(html)("title").text();
                     let pathLabel = url.parse(item).path;
-                    let body = `页面：${item}<br><br>`;
+                    let str1 = pathLabel.match(/pages\/(\S*)/)[1];
+                    if (str1.charAt(str1.length - 1) == "/") {
+                        str1 = str1.substr(0, str1.length - 1)
+                    }
                     title = `「评论」${title}`
-                    let form = JSON.stringify(body, {labels: [config.kind, "Comment", pathLabel], title});
+                    let form = JSON.stringify({labels: [config.kind, "Comment", str1], title});
                     return send({...requestPostOpt, form});
                 });
                 console.log(`已完成${initRet.length}个！`);
