@@ -75,7 +75,7 @@ console.log("开始初始化评论...");
                 });
                 console.log(`已完成${initRet.length}个！`);
                 console.log("可以愉快的发表评论了！");
-            }, 40000);
+            }, 50000);
         } else {
             console.log("本次发布无新增页面，无需初始化issue!!");
         }
