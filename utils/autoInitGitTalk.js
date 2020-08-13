@@ -52,9 +52,11 @@ console.log("开始初始化评论...");
         let notInitIssueLinks = urls.filter((link) => {
             return !issues.find((item) => {
                 link = removeProtocol(link);
-                return item.body.includes(link);
+                let labelNames = item.labels.map(label => label.name)
+                return labelNames.includes(link);
             });
         });
+
         if (notInitIssueLinks.length > 0) {
             console.log(`本次有${notInitIssueLinks.length}个链接需要初始化issue：`);
             console.log(notInitIssueLinks);
@@ -114,7 +116,7 @@ function sitemapXmlReader(file) {
 }
 
 function removeProtocol(url) {
-    return url.substr(url.indexOf(":"));
+    return url.substr(url.indexOf("/pages"));
 }
 
 function send(options) {
