@@ -25,6 +25,8 @@ git add -A
 git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
+echo "进行附加操作"
+node utils/genSiteMap.js && node utils/autoInitGitTalk.js ${GITHUB_TOKEN}
 # deploy to coding
 #echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
 #if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
