@@ -7,7 +7,7 @@ const cheerio = require("cheerio");
 // 根据自己的情况进行配置
 const config = {
     username: "holddie", // GitHub 用户名
-    token: "5a598c6aee38d2b60d89749a27cf94609af91e07", // GitHub Token
+    token: "490b9b3f544fd3862590f1bf7c0f9c2af899ac29", // GitHub Token
     repo: "9zhe.tech", // 存放 issues的git仓库
     // sitemap.xml的路径，commit.js放置在根目录下，无需修改，其他情况自行处理
     sitemapUrl: path.resolve(__dirname, "sitemap.xml"),
