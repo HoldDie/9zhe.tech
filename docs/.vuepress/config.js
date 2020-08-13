@@ -65,7 +65,7 @@ module.exports = {
             link: 'https://github.com/holddie' // 可选的
         },
         blogger: { // 博主信息，显示在首页侧边栏
-            avatar: 'https://cdn.jsdelivr.net/gh/holddie/9zhe.tech/doc/public/img/avatar.jpg',
+            avatar: 'https://cdn.jsdelivr.net/gh/holddie/9zhe.tech/docs/.vuepress/public/img/avatar.jpg',
             name: 'HoldDie',
             slogan: ''
         },
