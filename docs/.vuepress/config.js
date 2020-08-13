@@ -195,6 +195,11 @@ module.exports = {
                     return moment(timestamp).format('YYYY/MM/DD, H:MM:SS');
                 }
             }
+        ],
+        ['sitemap',
+            {
+                hostname: 'https://9zhe.tech'
+            }
         ]
     ],
     // configureWebpack: {
