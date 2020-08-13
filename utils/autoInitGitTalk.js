@@ -7,7 +7,7 @@ const cheerio = require("cheerio");
 // 根据自己的情况进行配置
 const config = {
     username: "holddie", // GitHub 用户名
-    token: "4bac41e9b2d5c0ad0e481bc20672e6b826529403", // GitHub Token
+    token: "5a598c6aee38d2b60d89749a27cf94609af91e07", // GitHub Token
     repo: "9zhe.tech", // 存放 issues的git仓库
     // sitemap.xml的路径，commit.js放置在根目录下，无需修改，其他情况自行处理
     sitemapUrl: path.resolve(__dirname, "sitemap.xml"),
@@ -31,10 +31,11 @@ console.log("开始初始化评论...");
 (async function () {
     console.log("开始检索链接，请稍等...");
     try {
+
+
         let urls = sitemapXmlReader(config.sitemapUrl);
-        // let directory = ['/project/', '/tutorial/'];
-        let directory = ['/project/'];
-        //筛选需初始化的链接，如不需筛选，下面这句可注释
+        // 设置不生成的路径规则
+        let directory = ['/pages/'];
         urls = inArray(urls, directory)
         console.log(`共检索到${urls.length}个链接`);
         console.log("开始获取已经初始化的issues:");
@@ -60,10 +61,8 @@ console.log("开始初始化评论...");
                     let html = await send({...requestGetOpt, url: item});
                     let title = cheerio.load(html)("title").text();
                     let pathLabel = url.parse(item).path;
-                    // let body = `${item}<br><br>${websiteConfig.description}`;
-                    // let form = JSON.stringify({ body, labels: [config.kind, pathLabel], title });
-
-                    let form = JSON.stringify({labels: [config.kind, pathLabel], title});
+                    let body = `${item}<br><br>${websiteConfig.description}`;
+                    let form = JSON.stringify({body, labels: [config.kind, pathLabel], title});
                     return send({...requestPostOpt, form});
                 });
                 console.log(`已完成${initRet.length}个！`);
@@ -96,6 +95,7 @@ function inArray(arr, arr2) {
 
 function sitemapXmlReader(file) {
     let data = fs.readFileSync(file, "utf8");
+
     let sitemap = xmlParser(data);
     return sitemap.root.children.map(function (url) {
         let loc = url.children.filter(function (item) {
@@ -120,3 +120,6 @@ function send(options) {
         });
     });
 }
+
+
+
