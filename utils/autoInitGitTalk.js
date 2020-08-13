@@ -51,9 +51,9 @@ console.log("开始初始化评论...");
 
         let notInitIssueLinks = urls.filter((link) => {
             return !issues.find((item) => {
-                link = removeProtocol(link);
+                let link1 = removeProtocol(link);
                 let labelNames = item.labels.map(label => label.name)
-                return labelNames.includes(link);
+                return labelNames.includes(link1);
             });
         });
 
@@ -119,8 +119,13 @@ function sitemapXmlReader(file) {
 }
 
 function removeProtocol(url) {
-    // let pathLabel = url.substr(url.indexOf("/pages"));
-    let str1 = url.match(/pages\/(\S*)/)[1];
+    let str1;
+    let pageKey = url.match(/pages\/(\S*)/);
+    if (pageKey != null && pageKey.length > 0) {
+        str1 = url.match(/pages\/(\S*)/)[1];
+    } else {
+        return str1;
+    }
     if (str1.charAt(str1.length - 1) == "/") {
         str1 = str1.substr(0, str1.length - 1)
     }
