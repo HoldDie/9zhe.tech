@@ -119,8 +119,8 @@ function sitemapXmlReader(file) {
 }
 
 function removeProtocol(url) {
-    let pathLabel = url.substr(url.indexOf("/pages"));
-    let str1 = pathLabel.match(/pages\/(\S*)/)[1];
+    // let pathLabel = url.substr(url.indexOf("/pages"));
+    let str1 = url.match(/pages\/(\S*)/)[1];
     if (str1.charAt(str1.length - 1) == "/") {
         str1 = str1.substr(0, str1.length - 1)
     }
