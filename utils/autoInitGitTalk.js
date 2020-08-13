@@ -119,7 +119,12 @@ function sitemapXmlReader(file) {
 }
 
 function removeProtocol(url) {
-    return url.substr(url.indexOf("/pages"));
+    let pathLabel = url.substr(url.indexOf("/pages"));
+    let str1 = pathLabel.match(/pages\/(\S*)/)[1];
+    if (str1.charAt(str1.length - 1) == "/") {
+        str1 = str1.substr(0, str1.length - 1)
+    }
+    return str1;
 }
 
 function send(options) {
