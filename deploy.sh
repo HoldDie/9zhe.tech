@@ -26,6 +26,7 @@ git commit -m "${msg}"
 git push -f $githubUrl master:gh-pages # 推送到github
 
 echo "进行附加操作"
+cd ../../../
 npm run autoGitTalk ${GITHUB_TOKEN}
 # deploy to coding
 #echo 'www.xugaoyi.com\nxugaoyi.com' > CNAME  # 自定义域名
