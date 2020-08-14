@@ -23,14 +23,14 @@ module.exports = [
                 ]
             }
         ]
-    }, // {
-    //     text: '页面',
-    //     link: '/ui/',
-    //     items: [
-    //         {text: 'HTML', link: '/pages/8309a5b876fc95e3/'},
-    //         {text: 'CSS', link: '/pages/0a83b083bdf257cb/'},
-    //     ]
-    // },
+    },
+    {
+        text: '后端',
+        link: '/backend/',
+        items: [
+            {text: 'Go', link: '/pages/efqvhyl29qjrcdzs/'},
+        ]
+    },
 
     {
         text: '技术',
