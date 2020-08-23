@@ -29,6 +29,7 @@ module.exports = [
         link: '/backend/',
         items: [
             {text: 'Go', link: '/pages/efqvhyl29qjrcdzs/'},
+            {text: 'MIT-6824', link: '/pages/seas6nequoow3xia/'},
         ]
     },
 
