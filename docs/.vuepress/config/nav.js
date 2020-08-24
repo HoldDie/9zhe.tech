@@ -2,7 +2,7 @@ module.exports = [
     {text: '首页', link: '/'},
     {
         text: '前端',
-        link: '/web/',  //目录页，vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        link: '/frontend/',  //目录页，vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [
             {
                 text: '前端基础', items: [
@@ -23,34 +23,34 @@ module.exports = [
                 ]
             }
         ]
-    },
-    {
+    }, {
         text: '后端',
         link: '/backend/',
         items: [
             {text: 'Go', link: '/pages/efqvhyl29qjrcdzs/'},
             {text: 'MIT-6824', link: '/pages/seas6nequoow3xia/'},
         ]
-    },
-
-    {
-        text: '技术',
-        link: '/technology/',
+    }, {
+        text: '架构',
+        link: '/arch/',
         items: [
-            {text: '技术文档', link: '/pages/9a7ee40fc232253e/'},
-            {text: 'GitHub技巧', link: '/pages/4c778760be26d8b3/'},
-            {text: 'Nodejs', link: '/pages/117708e0af7f0bd9/'},
-            {text: '博客搭建', link: '/pages/41f87d890d0a02af/'},
+            {text: '算法与数据结构', link: '/pages/aiteeh2uph9veway/'},
+            {text: '面向对象', link: '/pages/uj8chu4zieg4vahz/'},
+            {text: '设计原则', link: '/pages/eeredaefie0oj7ni/'},
+            {text: '代码整洁', link: '/pages/wiesohmoovaik4ee/'},
+            {text: '重构', link: '/pages/xieghaungaesooj9/'},
+            {text: '设计模式', link: '/pages/phau4foo4xaithep/'},
+            {text: '编程范式', link: '/pages/iefoh9ahwei0fein/'},
+            {text: '架构风格', link: '/pages/ai6chingoheewoo5/'},
+            {text: '架构模式', link: '/pages/ohh2aim1nu1sies5/'},
         ]
-    },
-    {
-        text: '更多',
-        link: '/more/',
+    }, {
+        text: '读书',
+        link: '/book/',
         items: [
-            {text: '学习', link: '/pages/2zoys1gkukvn6zwh/'},
-            {text: '面试', link: '/pages/aea6571b7a8bae86/'},
-            {text: '心情杂货', link: '/pages/2d615df9a36a98ed/'},
-            {text: '友情链接', link: '/friends/'},
+            {text: '学习', link: '/pages/iek1woy2sae7gije/'},
+            {text: '技术', link: '/pages/ree0ua6ighoof1ie/'},
+            {text: '人文', link: '/pages/uha1io6adielaeli/'},
         ]
     },
     {text: '关于', link: '/about/'},
