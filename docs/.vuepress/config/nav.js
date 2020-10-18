@@ -48,7 +48,7 @@ module.exports = [
         text: '读书',
         link: '/book/',
         items: [
-            {text: '学习', link: '/pages/iek1woy2sae7gije/'},
+            {text: '学习', link: '/pages/2zoys1gkukvn6zwh/'},
             {text: '技术', link: '/pages/ree0ua6ighoof1ie/'},
             {text: '人文', link: '/pages/uha1io6adielaeli/'},
         ]
