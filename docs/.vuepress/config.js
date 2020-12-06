@@ -25,7 +25,7 @@ module.exports = {
         nav,
         sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
         logo: '/img/logo.png', // 导航栏logo
-        repo: 'xugaoyi/vuepress-theme-vdoing', // 导航栏右侧生成Github链接
+        repo: 'holddie', // 导航栏右侧生成Github链接
         searchMaxSuggestions: 10, // 搜索结果显示最大数
         lastUpdated: '上次更新', // 更新的时间，及前缀文字   string | boolean (取值为git提交时间)
         docsDir: 'docs', // 编辑的文件夹
@@ -65,7 +65,7 @@ module.exports = {
             link: 'https://github.com/holddie' // 可选的
         },
         blogger: { // 博主信息，显示在首页侧边栏
-            avatar: 'https://cdn.jsdelivr.net/gh/HoldDie/jsdelivr-static/img/avatar-02.png',
+            avatar: 'https://cdn.jsdelivr.net/gh/HoldDie/img/20201204131346.jpg',
             name: 'HoldDie',
             slogan: '长期有耐心，一切才刚刚开始！'
         },
